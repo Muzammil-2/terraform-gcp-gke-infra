@@ -6,7 +6,7 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket = "webappze"
+    bucket = "trail001"
     prefix = "terraform/state"
   }
   required_providers {
