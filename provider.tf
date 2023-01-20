@@ -1,7 +1,7 @@
 provider "google" {
   project = "devops-374009"
   region  = "us-central1"
-  credentials = file("/home/muzammil01vivekengg/service.json")
+  
 }
 
 terraform {
