@@ -1,7 +1,7 @@
 provider "google" {
   project = "devops-374009"
   region  = "us-central1"
-  credentials = file("cred.json")
+  credentials = file("web.json")
   
 }
 
