@@ -6,7 +6,7 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket = "trail001"
+    bucket = "mobile"
     prefix = "terraform/state"
     
   }
