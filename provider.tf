@@ -8,7 +8,7 @@ terraform {
   backend "gcs" {
     bucket = "trail001"
     prefix = "terraform/state"
-    credentials = "/home/muzammil01vivekengg/compute.json"
+    
   }
   required_providers {
     google = {
