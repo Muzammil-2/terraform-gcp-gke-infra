@@ -1,9 +1,7 @@
 provider "google" {
   project = "devops-374009"
   region  = "us-central1"
-  credentials = file("web.json")
-  
-}
+ }
 
 terraform {
   backend "gcs" {
