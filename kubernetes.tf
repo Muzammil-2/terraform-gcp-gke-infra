@@ -9,7 +9,7 @@ resource "google_container_cluster" "primary" {
   logging_service          = "logging.googleapis.com/kubernetes"
   monitoring_service       = "monitoring.googleapis.com/kubernetes"
   networking_mode          = "VPC_NATIVE"
-
+  project                  = var.project
   # Optional, if you want multi-zonal cluster
   node_locations = [
     "us-central1-b"
@@ -29,7 +29,7 @@ resource "google_container_cluster" "primary" {
   }
 
   workload_identity_config {
-    workload_pool = "devops-374009.svc.id.goog"
+    workload_pool = "${var.project}.svc.id.goog"
   }
 
   ip_allocation_policy {

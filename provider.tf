@@ -1,14 +1,16 @@
 provider "google" {
-  project = "devops-374009"
-  region  = "us-central1"
- }
+  project     = var.project
+  region      = "us-central1"
+  credentials = file("pruthvi-terraform-sa.json")
+}
 
 terraform {
-  backend "gcs" {
+  /* backend "gcs" {
     bucket = "mobili"
     prefix = "terraform/state"
     
   }
+  */
   required_providers {
     google = {
       source  = "hashicorp/google"
